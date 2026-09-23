@@ -1,0 +1,81 @@
+.blog-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--gap);
+}
+
+.blog-grid {
+  list-style: none;
+  margin: var(--gap-lg) 0 0;
+  padding: 0;
+}
+
+.post-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: var(--gap-xs);
+}
+
+.post-card h3 {
+  margin-bottom: var(--gap-xs);
+  font-size: 1.125rem;
+}
+
+.post-card h3 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.post-card h3 a:hover {
+  color: var(--berry);
+}
+
+.post-card-excerpt {
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+}
+
+.post-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+  font-size: 0.8125rem;
+  color: var(--ink-soft);
+  margin-bottom: var(--gap-sm);
+}
+
+.post-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-sm);
+}
+
+.post-card-delete {
+  color: var(--alert);
+  border-color: var(--alert);
+}
+
+.post-form {
+  max-width: 32rem;
+  margin: var(--gap-lg) 0;
+  padding: var(--gap-lg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.post-form h2 {
+  font-size: 1.125rem;
+  margin-bottom: var(--gap);
+}
+
+@media (max-width: 560px) {
+  .blog-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

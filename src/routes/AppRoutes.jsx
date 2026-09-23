@@ -4,6 +4,8 @@ import ProtectedRoute from './ProtectedRoute';
 import LoginPage from '../features/auth/LoginPage';
 import ProfilePage from '../features/auth/ProfilePage';
 import UsersPage from '../features/users/UsersPage';
+import PostsPage from '../features/blog/PostsPage';
+import PostDetailPage from '../features/blog/PostDetailPage';
 
 import NotFoundPage from '../pages/NotFoundPage';
 import Placeholder from '../pages/Placeholder';
@@ -22,8 +24,8 @@ export default function AppRoutes() {
         }
       />
 
-      <Route path="/posts" element={<Placeholder title="Blog" owner="Dev 2" />} />
-      <Route path="/posts/:id" element={<Placeholder title="Article" owner="Dev 2" />} />
+      <Route path="/posts" element={<PostsPage />} />
+      <Route path="/posts/:id" element={<PostDetailPage />} />
 
       <Route path="/login" element={<LoginPage />} />
       <Route path="/users" element={<UsersPage />} />
