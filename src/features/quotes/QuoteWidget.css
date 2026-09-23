@@ -1,0 +1,31 @@
+.quote-widget {
+  background: var(--surface-1);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--primary);
+}
+
+.quote-widget.loading {
+  opacity: 0.7;
+}
+
+.quote-widget blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+.quote-widget p {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--text-1);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.quote-widget footer {
+  font-weight: 600;
+  color: var(--text-2);
+  font-size: 1rem;
+}

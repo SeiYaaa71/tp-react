@@ -1,0 +1,14 @@
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--surface-1);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-top: 2rem;
+}
+
+.empty-state p {
+  color: var(--text-2);
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+}

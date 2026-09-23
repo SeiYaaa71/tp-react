@@ -8,18 +8,19 @@ import PostsPage from '../features/blog/PostsPage';
 import PostDetailPage from '../features/blog/PostDetailPage';
 
 import NotFoundPage from '../pages/NotFoundPage';
-import Placeholder from '../pages/Placeholder';
-
+import RecipesPage from '../features/recipes/RecipesPage';
+import RecipeDetailPage from '../features/recipes/RecipeDetailPage';
+import FavoritesPage from '../features/favorites/FavoritesPage';
 export default function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Placeholder title="Catalogue de recettes" owner="Dev 3" />} />
-      <Route path="/recipes/:id" element={<Placeholder title="Fiche recette" owner="Dev 3" />} />
+      <Route path="/" element={<RecipesPage />} />
+      <Route path="/recipes/:id" element={<RecipeDetailPage />} />
       <Route
         path="/favoris"
         element={
           <ProtectedRoute>
-            <Placeholder title="Mes favoris" owner="Dev 3" />
+            <FavoritesPage />
           </ProtectedRoute>
         }
       />
