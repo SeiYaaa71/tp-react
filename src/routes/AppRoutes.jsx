@@ -4,6 +4,7 @@ import ProtectedRoute from './ProtectedRoute';
 import LoginPage from '../features/auth/LoginPage';
 import ProfilePage from '../features/auth/ProfilePage';
 import UsersPage from '../features/users/UsersPage';
+import UserDetailPage from '../features/users/UserDetailPage';
 import PostsPage from '../features/blog/PostsPage';
 import PostDetailPage from '../features/blog/PostDetailPage';
 
@@ -30,6 +31,7 @@ export default function AppRoutes() {
 
       <Route path="/login" element={<LoginPage />} />
       <Route path="/users" element={<UsersPage />} />
+      <Route path="/users/:id" element={<UserDetailPage />} />
       <Route
         path="/profil"
         element={

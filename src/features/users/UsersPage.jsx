@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers } from './usersSlice';
 import { Loading, ErrorState, EmptyState } from '../../components/States';
@@ -48,14 +49,16 @@ export default function UsersPage() {
       {visibleUsers.length > 0 && (
         <ul className="grid users-grid">
           {visibleUsers.map((user) => (
-            <li key={user.id} className="card user-card">
-              <img src={user.image} alt="" loading="lazy" />
-              <div className="card-body">
-                <h3>{user.username}</h3>
-                <p>
-                  {user.firstName} {user.lastName}
-                </p>
-              </div>
+            <li key={user.id}>
+              <Link to={`/users/${user.id}`} className="card user-card" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                <img src={user.image} alt="" loading="lazy" />
+                <div className="card-body">
+                  <h3>{user.username}</h3>
+                  <p>
+                    {user.firstName} {user.lastName}
+                  </p>
+                </div>
+              </Link>
             </li>
           ))}
         </ul>

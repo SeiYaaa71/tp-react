@@ -36,6 +36,9 @@ export default function RecipesPage() {
               </div>
               <div className="recipe-content">
                 <h3 className="recipe-title">{recipe.name}</h3>
+                <div style={{ marginBottom: '1rem', fontSize: '0.875rem', color: 'var(--ink)', fontWeight: '500' }}>
+                  {recipe.cuisine} • {recipe.difficulty}
+                </div>
                 <div className="recipe-meta">
                   <span className="meta-item">⏱ {recipe.prepTimeMinutes + recipe.cookTimeMinutes} min</span>
                   <span className="meta-item">⭐ {recipe.rating}</span>

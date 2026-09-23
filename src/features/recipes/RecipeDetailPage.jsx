@@ -62,10 +62,20 @@ export default function RecipeDetailPage() {
         
         <div className="recipe-detail-content">
           <h1>{currentRecipe.name}</h1>
+          
+          <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
+            <span className="tag">{currentRecipe.cuisine}</span>
+            <span className="tag">{currentRecipe.difficulty}</span>
+            {currentRecipe.tags.map(tag => (
+              <span key={tag} className="tag">#{tag}</span>
+            ))}
+          </div>
+
           <div className="recipe-meta-large">
             <span>⏱ Préparation : {currentRecipe.prepTimeMinutes} min</span>
             <span>🍳 Cuisson : {currentRecipe.cookTimeMinutes} min</span>
             <span>🍽️ Portions : {currentRecipe.servings}</span>
+            <span>🔥 Calories : {currentRecipe.caloriesPerServing} kcal/portion</span>
             <span>⭐ {currentRecipe.rating} ({currentRecipe.reviewCount} avis)</span>
           </div>
 
